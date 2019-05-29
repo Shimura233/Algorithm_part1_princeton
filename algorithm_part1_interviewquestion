@@ -1,0 +1,55 @@
+#analysis of algorithm
+## Q1
+
+3-SUM in quadratic time. Design an algorithm for the 3-SUM problem that takes time proportional to n^2 in the worst case. You may assume that you can sort the n integers in time proportional to n^2 or better.
+
+### linear time algorithm for 2-sum
+public class Twosum {
+    private int[] a;
+
+    public Twosum(int[] b) {
+        int n = b.length;
+        a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = b[i];
+        }
+    }
+
+    public int[] findx(int x) {
+        int i = 0;
+        int j = a.length - 1;
+        int[] ind = new int[2];
+        while (i < j) {
+            if (a[i] + a[j] == x) {
+                ind[0] = i;
+                ind[1] = j;
+                return ind;
+            }
+            else {
+                if (a[i] + a[j] < x) {
+                    i++;
+                }
+                else {
+                    j--;
+                }
+            }
+        }
+        ind[0] = -1;
+        ind[1] = -1;
+        return ind;
+    }
+
+    public static void main(String[] args) {
+        int n = StdIn.readInt();
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = StdIn.readInt();
+        }
+        int x = StdIn.readInt();
+        Twosum test = new Twosum(a);
+        int[] result = test.findx(x);
+        StdOut.println(result[0] + " " + result[1]);
+    }
+}
+
+##TODO:Q2 & Q3
