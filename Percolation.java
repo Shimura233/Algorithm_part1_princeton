@@ -11,7 +11,7 @@ public class Percolation {
     private boolean[] openind;
     private int numberOfOpenSites;
     private int num;
-    private WeightedQuickUnionUF gridforbackwash;/*to deal with backwash*/
+    private WeightedQuickUnionUF gridforbackwash;//to deal with backwash
 
     public Percolation(int n) {
         if (n <= 0) {
