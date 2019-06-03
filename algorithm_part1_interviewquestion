@@ -52,4 +52,11 @@ public class Twosum {
     }
 }
 
-##TODO:Q2 & Q3
+##Q2: how to find x in a bitonic array using ~2logN compares and ~3logN compares?
+
+### for ~3logN compares: using binary, find the maximum in the array-find medium, compare medium to its left/right neighbor, if left<medium, then shift to [medium+1,up]; Otherwise, shift to [lower,medium-1].
+then using ascending binary search on [lower,maximumindex] and descending binary search on [maximumindex+1,upper].
+
+### for ~2logN compares:refer to Binomic.java
+
+##TODO: Q3
