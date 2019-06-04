@@ -59,4 +59,12 @@ then using ascending binary search on [lower,maximumindex] and descending binary
 
 ### for ~2logN compares:refer to Binomic.java
 
-##TODO: Q3
+##Q3: drop eggs. find T where the egg breaks for the first time(it's also the model of find the maximum/minimun of binotic array)
+**version 1:** 1 egg, T tosses  sequential search
+**version 2:** logN egg, logN tosses binary search
+**version 3:** logT egg, 2logT tosses find a interval <= 2T, implement binary search on this interval
+**version 4:** 2 egg, 2\sqrt(n) tosses partition into \sqrt(n) intervals of length \sqrt(n), sequentially toss, then determine the interval [(i-1)*par+1,i*par], using sequential search
+**version 5:** 2 egg, \sqrt(2n) tosses partition into intervals of decreasing to 1 length which is summed up to n, sequentially toss, then then determine the interval [(i-1)*par+1,i*par], using sequential search
+**version 6:** 2 egg, <=2\sqrt(2T) tosses partition into intervals of increasing length from 1. sequentially toss, then then determine the interval [(i-1)*par+1,i*par], using sequential search
+rough proof of v6: after s sequential test, the egg breaks for the first time ,then the total tosses will be 2s. and we know that 1+...+(s-1)=s(s-1)/2 < T <=s(s+1)/2. Thus, 2s <=2\sqrt(2T).
+Implementation: refers to DropEggs.java
