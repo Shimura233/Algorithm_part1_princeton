@@ -40,6 +40,16 @@ public class AscendBinary {
             }
         }
     }
+    /*binary search from sedgewick
+    public int binarySearch(int l, int u, int x) {
+    while (l<=u) {
+    int m=(l+u)>>>1;
+    if (num[m]<x) l=m;
+    else if (num[m]>x) u=m;
+    else return m;
+    }
+    return -1;
+    }*/
 
     public static void main(String[] args) {
         int x = Integer.parseInt(args[0]);
