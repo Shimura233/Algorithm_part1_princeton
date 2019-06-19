@@ -39,7 +39,7 @@ public class AscendBinary {
                 }
             }
         }
-    }
+    }//space complexity O(logN), time complexity O(logN)
     /*binary search from sedgewick
     public int binarySearch(int l, int u, int x) {
     while (l<=u) {
@@ -49,7 +49,7 @@ public class AscendBinary {
     else return m;
     }
     return -1;
-    }*/
+    } space complexity O(1), time complexity O(logN)*/
 
     public static void main(String[] args) {
         int x = Integer.parseInt(args[0]);
