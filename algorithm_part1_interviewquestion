@@ -68,3 +68,8 @@ then using ascending binary search on [lower,maximumindex] and descending binary
 **version 6:** 2 egg, <=2\sqrt(2T) tosses partition into intervals of increasing length from 1. sequentially toss, then then determine the interval [(i-1)*par+1,i*par], using sequential search
 rough proof of v6: after s sequential test, the egg breaks for the first time ,then the total tosses will be 2s. and we know that 1+...+(s-1)=s(s-1)/2 < T <=s(s+1)/2. Thus, 2s <=2\sqrt(2T).
 Implementation: refers to DropEggs.java
+
+#sort
+##Q1.找两个二维点集的交集
+排序后，然后两个指针指向两个点集，遍历找是否相同。refer to interaction
+##Q2.确定两个数集，一个是否是另一个的permutation。refer to IsPermut
